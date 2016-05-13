@@ -1,0 +1,26 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Login-Daten
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="page2">
+  <ion-list>
+
+  <ion-item>
+    <ion-label>Username</ion-label>
+    <ion-input [(ngModel)]="username" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+  <button block (click)="speichern()">Speichern</button>
+</div>
+</ion-content>
