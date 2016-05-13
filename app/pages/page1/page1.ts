@@ -18,7 +18,7 @@ export class Page1 {
     let username = window.localStorage.getItem("username");
     let password = window.localStorage.getItem("password");
     // network - Guest Network
-    var body = 'username=c%2Egruenberg%40lvm%2Ede&password='+password+"&network_name=Guest%20Network&Submit=Submit";
+    var body = 'username='+encodeURIComponent(username)+'&password='+encodeURIComponent(password)+"&network_name=Guest%20Network&Submit=Submit";
     var headers = new Headers();
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
