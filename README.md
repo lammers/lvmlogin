@@ -1,9 +1,10 @@
 # lvmlogin
 
 ## Vorraussetzungen
+```
 npm install -g ionic@beta
 npm install 
-
+```
 ## Run with
 ```
 ionic serve --lab // Damit kann lokal im Browser getestet werden
