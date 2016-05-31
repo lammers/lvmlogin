@@ -12,24 +12,20 @@ export class Page1 {
   constructor(private http:Http) {
 
   }
-  
-  
+
+
   login(){
     let username = window.localStorage.getItem("username");
     let password = window.localStorage.getItem("password");
     // network - Guest Network
-    var body = 'username='+encodeURIComponent(username)+'&password='+encodeURIComponent(password)+"&network_name=Guest%20Network&Submit=Submit";
+    var body = 'buttonClicked=4&username='+encodeURIComponent(username)+'&password='+encodeURIComponent(password)+"&network_name=Guest%20Network&Submit=Submit";
     var headers = new Headers();
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
     this.http.post("https://gast.lvm.de/login.html",body,headers).map(this.extractData).catch(this.handleError).subscribe(()=>{
       alert("Bin drin - hoffentlich");
     });
-    
   }
-  
-  
-  
    private extractData(res: Response) {
     if (res.status < 200 || res.status >= 300) {
       throw new Error('Bad response status: ' + res.status);
@@ -45,3 +41,4 @@ export class Page1 {
     return Observable.throw(errMsg);
   }
 }
+
